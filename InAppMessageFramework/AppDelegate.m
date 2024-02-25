@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "InAppMessageManager.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  
+  InAppMessage *appLoadMessage = [[InAppMessage alloc] initWithEventType:InAppMessageEventAppLoad messageType:InAppMessageTypeFullscreen imageName:@"Nova" text:@"Welcome to the app!"];
+
+  [[InAppMessageManager sharedManager] registerMessage:appLoadMessage];
   return YES;
 }
 

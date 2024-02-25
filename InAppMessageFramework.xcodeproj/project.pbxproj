@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DAFB67ED2B8BB5A0009653F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB67EC2B8BB5A0009653F7 /* AppDelegate.m */; };
 		DAFB67F02B8BB5A0009653F7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB67EF2B8BB5A0009653F7 /* SceneDelegate.m */; };
-		DAFB67F32B8BB5A0009653F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB67F22B8BB5A0009653F7 /* ViewController.m */; };
 		DAFB67F62B8BB5A0009653F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFB67F42B8BB5A0009653F7 /* Main.storyboard */; };
 		DAFB67F82B8BB5A2009653F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFB67F72B8BB5A2009653F7 /* Assets.xcassets */; };
 		DAFB67FB2B8BB5A2009653F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFB67F92B8BB5A2009653F7 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,14 @@
 		DAFB68082B8BB5A2009653F7 /* InAppMessageFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68072B8BB5A2009653F7 /* InAppMessageFrameworkTests.m */; };
 		DAFB68122B8BB5A2009653F7 /* InAppMessageFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68112B8BB5A2009653F7 /* InAppMessageFrameworkUITests.m */; };
 		DAFB68142B8BB5A2009653F7 /* InAppMessageFrameworkUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68132B8BB5A2009653F7 /* InAppMessageFrameworkUITestsLaunchTests.m */; };
+		DAFB68312B8BB687009653F7 /* FullScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68242B8BB686009653F7 /* FullScreenView.m */; };
+		DAFB68322B8BB687009653F7 /* InAppMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68252B8BB686009653F7 /* InAppMessageView.m */; };
+		DAFB68332B8BB687009653F7 /* InAppMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68272B8BB686009653F7 /* InAppMessage.m */; };
+		DAFB68342B8BB687009653F7 /* InAppMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68282B8BB686009653F7 /* InAppMessageManager.m */; };
+		DAFB68352B8BB687009653F7 /* ModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB68292B8BB686009653F7 /* ModalView.m */; };
+		DAFB68362B8BB687009653F7 /* InAppMessageViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB682B2B8BB686009653F7 /* InAppMessageViewFactory.m */; };
+		DAFB68372B8BB687009653F7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB682D2B8BB686009653F7 /* MainViewController.m */; };
+		DAFB68382B8BB687009653F7 /* InAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFB682E2B8BB686009653F7 /* InAppViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +49,6 @@
 		DAFB67EC2B8BB5A0009653F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DAFB67EE2B8BB5A0009653F7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		DAFB67EF2B8BB5A0009653F7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		DAFB67F12B8BB5A0009653F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DAFB67F22B8BB5A0009653F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DAFB67F52B8BB5A0009653F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAFB67F72B8BB5A2009653F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAFB67FA2B8BB5A2009653F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,24 @@
 		DAFB680D2B8BB5A2009653F7 /* InAppMessageFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppMessageFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB68112B8BB5A2009653F7 /* InAppMessageFrameworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppMessageFrameworkUITests.m; sourceTree = "<group>"; };
 		DAFB68132B8BB5A2009653F7 /* InAppMessageFrameworkUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppMessageFrameworkUITestsLaunchTests.m; sourceTree = "<group>"; };
+		DAFB68202B8BB686009653F7 /* FullScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenView.h; sourceTree = "<group>"; };
+		DAFB68212B8BB686009653F7 /* InAppMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppMessage.h; sourceTree = "<group>"; };
+		DAFB68222B8BB686009653F7 /* InAppMessageViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppMessageViewFactory.h; sourceTree = "<group>"; };
+		DAFB68232B8BB686009653F7 /* InAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppViewController.h; sourceTree = "<group>"; };
+		DAFB68242B8BB686009653F7 /* FullScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenView.m; sourceTree = "<group>"; };
+		DAFB68252B8BB686009653F7 /* InAppMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppMessageView.m; sourceTree = "<group>"; };
+		DAFB68262B8BB686009653F7 /* InAppMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppMessageView.h; sourceTree = "<group>"; };
+		DAFB68272B8BB686009653F7 /* InAppMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppMessage.m; sourceTree = "<group>"; };
+		DAFB68282B8BB686009653F7 /* InAppMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppMessageManager.m; sourceTree = "<group>"; };
+		DAFB68292B8BB686009653F7 /* ModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalView.m; sourceTree = "<group>"; };
+		DAFB682A2B8BB686009653F7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DAFB682B2B8BB686009653F7 /* InAppMessageViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppMessageViewFactory.m; sourceTree = "<group>"; };
+		DAFB682C2B8BB686009653F7 /* ModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalView.h; sourceTree = "<group>"; };
+		DAFB682D2B8BB686009653F7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DAFB682E2B8BB686009653F7 /* InAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppViewController.m; sourceTree = "<group>"; };
+		DAFB682F2B8BB687009653F7 /* InAppMessageViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppMessageViewProtocol.h; sourceTree = "<group>"; };
+		DAFB68302B8BB687009653F7 /* InAppMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppMessageManager.h; sourceTree = "<group>"; };
+		DAFB68392B8BC816009653F7 /* InAppFrameworkConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InAppFrameworkConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +131,29 @@
 				DAFB67EC2B8BB5A0009653F7 /* AppDelegate.m */,
 				DAFB67EE2B8BB5A0009653F7 /* SceneDelegate.h */,
 				DAFB67EF2B8BB5A0009653F7 /* SceneDelegate.m */,
-				DAFB67F12B8BB5A0009653F7 /* ViewController.h */,
-				DAFB67F22B8BB5A0009653F7 /* ViewController.m */,
 				DAFB67F42B8BB5A0009653F7 /* Main.storyboard */,
 				DAFB67F72B8BB5A2009653F7 /* Assets.xcassets */,
 				DAFB67F92B8BB5A2009653F7 /* LaunchScreen.storyboard */,
 				DAFB67FC2B8BB5A2009653F7 /* Info.plist */,
 				DAFB67FD2B8BB5A2009653F7 /* main.m */,
+				DAFB68202B8BB686009653F7 /* FullScreenView.h */,
+				DAFB68242B8BB686009653F7 /* FullScreenView.m */,
+				DAFB68212B8BB686009653F7 /* InAppMessage.h */,
+				DAFB68272B8BB686009653F7 /* InAppMessage.m */,
+				DAFB68302B8BB687009653F7 /* InAppMessageManager.h */,
+				DAFB68282B8BB686009653F7 /* InAppMessageManager.m */,
+				DAFB68262B8BB686009653F7 /* InAppMessageView.h */,
+				DAFB68252B8BB686009653F7 /* InAppMessageView.m */,
+				DAFB68222B8BB686009653F7 /* InAppMessageViewFactory.h */,
+				DAFB682B2B8BB686009653F7 /* InAppMessageViewFactory.m */,
+				DAFB682F2B8BB687009653F7 /* InAppMessageViewProtocol.h */,
+				DAFB68232B8BB686009653F7 /* InAppViewController.h */,
+				DAFB682E2B8BB686009653F7 /* InAppViewController.m */,
+				DAFB682A2B8BB686009653F7 /* MainViewController.h */,
+				DAFB682D2B8BB686009653F7 /* MainViewController.m */,
+				DAFB682C2B8BB686009653F7 /* ModalView.h */,
+				DAFB68292B8BB686009653F7 /* ModalView.m */,
+				DAFB68392B8BC816009653F7 /* InAppFrameworkConstants.h */,
 			);
 			path = InAppMessageFramework;
 			sourceTree = "<group>";
@@ -266,8 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFB67F32B8BB5A0009653F7 /* ViewController.m in Sources */,
+				DAFB68372B8BB687009653F7 /* MainViewController.m in Sources */,
+				DAFB68362B8BB687009653F7 /* InAppMessageViewFactory.m in Sources */,
+				DAFB68342B8BB687009653F7 /* InAppMessageManager.m in Sources */,
+				DAFB68322B8BB687009653F7 /* InAppMessageView.m in Sources */,
+				DAFB68312B8BB687009653F7 /* FullScreenView.m in Sources */,
+				DAFB68352B8BB687009653F7 /* ModalView.m in Sources */,
+				DAFB68382B8BB687009653F7 /* InAppViewController.m in Sources */,
 				DAFB67ED2B8BB5A0009653F7 /* AppDelegate.m in Sources */,
+				DAFB68332B8BB687009653F7 /* InAppMessage.m in Sources */,
 				DAFB67FE2B8BB5A2009653F7 /* main.m in Sources */,
 				DAFB67F02B8BB5A0009653F7 /* SceneDelegate.m in Sources */,
 			);
