@@ -15,7 +15,7 @@
 
 + (UIView<InAppMessageViewProtocol> *)viewForMessage:(InAppMessage *)message {
     switch (message.messageType) {
-        case InAppMessageTypeFullscreen:
+        case FullscreenTemplate:
             return [[FullScreenView alloc] initWithMessage:message];
 //        case InAppMessageTypeModal:
 //            return [[ModalView alloc] initWithMessage:message];

@@ -37,7 +37,7 @@
 }
 
 - (InAppPresentationStyle)presentationStyle {
-    return InAppPresentationStyleFullScreen;
+    return FullScreen;
 }
 
 - (void)setupImageView {

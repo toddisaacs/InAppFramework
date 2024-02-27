@@ -100,7 +100,7 @@
 
 - (NSArray<NSLayoutConstraint *> *)constraintsForPresentationStyle:(InAppPresentationStyle)style withContainerView:(UIView *)containerView {
     switch (style) {
-        case InAppPresentationStyleFullScreen:
+        case FullScreen:
             return @[
                 // Constraints to fill the containerView
                 [self.containerView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
@@ -110,7 +110,7 @@
                 [self.containerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
                 [self.containerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor]
             ];
-        case InAppPresentationStyleModal:
+        case Modal:
             return @[
                 // Constraints for centered modal view
                 [self.containerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
@@ -118,7 +118,7 @@
                 [self.containerView.widthAnchor constraintEqualToConstant:300], // Fixed width
                 [self.containerView.heightAnchor constraintEqualToConstant:400]  // Fixed height
             ];
-        case InAppPresentationStyleBanner:
+        case Banner:
             return @[
                 // Constraints for banner view
                 [self.containerView.topAnchor constraintEqualToAnchor:self.view.topAnchor],

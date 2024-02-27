@@ -30,7 +30,7 @@
 
 - (void)buttonClicked {
   NSLog(@"buttonClicked Trigger App Load Event");
-    [[InAppMessageManager sharedManager] triggerEvent:InAppMessageEventAppLoad fromViewController:self];
+    [[InAppMessageManager sharedManager] triggerEvent:InAppEvent_AppLoad fromViewController:self];
 }
 
 @end

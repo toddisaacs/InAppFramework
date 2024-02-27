@@ -10,23 +10,23 @@
 
 //Supported presntation Style used by custom message to setup view container
 typedef NS_ENUM(NSUInteger, InAppPresentationStyle) {
-    InAppPresentationStyleFullScreen,
-    InAppPresentationStyleModal,
-    InAppPresentationStyleBanner
+    FullScreen,
+    Modal,
+    Banner
 };
 
 //All delivered types of messages
 typedef NS_ENUM(NSUInteger, InAppMessageType) {
-    InAppMessageTypeFullscreen,
-    InAppMessageTypeModal,
-    InAppMessageTypeBanner,
-    InAppMessageTypeCustom
+    FullscreenTemplate,
+    ModalTemplate,
+    BannerTemplate,
+    Custom
 };
 
 
 typedef NS_ENUM(NSInteger, InAppMessageEvent) {
-    InAppMessageEventAppLoad,
-    InAppMessageEventCustom
+    InAppEvent_AppLoad,
+    InAppEvent_Custom
 };
 
 

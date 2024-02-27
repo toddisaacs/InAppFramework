@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   
-  InAppMessage *appLoadMessage = [[InAppMessage alloc] initWithEventType:InAppMessageEventAppLoad messageType:InAppMessageTypeFullscreen imageName:@"Nova" text:@"Welcome to the app!"];
+  InAppMessage *appLoadMessage = [[InAppMessage alloc] initWithEventType:InAppEvent_AppLoad messageType:FullscreenTemplate imageName:@"Nova" text:@"Welcome to the app!"];
 
   [[InAppMessageManager sharedManager] registerMessage:appLoadMessage];
   return YES;

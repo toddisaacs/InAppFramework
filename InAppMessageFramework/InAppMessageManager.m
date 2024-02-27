@@ -50,15 +50,17 @@
             InAppViewController *inAppVC = [[InAppViewController alloc] initWithMessage:messageToShow];
             
           // Configure the modal presentation style based on the message type
+          // I think only modal and full are needed but need to look at split screen view controller
+          //TODO: Determine OS presentation style and how to provide for Custom
           switch (messageToShow.messageType) {
-              case InAppMessageTypeFullscreen:
+              case FullscreenTemplate:
                   inAppVC.modalPresentationStyle = UIModalPresentationFullScreen;
                   inAppVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
                   break;
-              case InAppMessageTypeModal:
+              case ModalTemplate:
                   inAppVC.modalPresentationStyle = UIModalPresentationCustom; // Adjust as necessary for your modal style
                   break;
-              case InAppMessageTypeBanner:
+              case BannerTemplate:
                   inAppVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
                   // Additional logic for banner positioning and size would go here
                   break;
@@ -66,6 +68,7 @@
           }
           
             // All we do here is present the InAppViewController
+            //TODO: configurable callback option
             [viewController presentViewController:inAppVC animated:YES completion:nil];
         });
     }
