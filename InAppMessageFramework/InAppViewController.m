@@ -72,8 +72,8 @@
   
     self.containerView.translatesAutoresizingMaskIntoConstraints = NO; // Use auto layout
   
-    InAppPresentationStyle style = [self.messageView presentationStyle];
-     NSArray<NSLayoutConstraint *> *constraints = [self constraintsForPresentationStyle:style withContainerView:self.containerView];
+    InAppViewDisplayType displayType = [self.messageView displayType];
+     NSArray<NSLayoutConstraint *> *constraints = [self constraintsForPresentationStyle:displayType withContainerView:self.containerView];
   
      [NSLayoutConstraint activateConstraints:constraints];
   
@@ -108,8 +108,8 @@
   [self.messageView configureView];
 }
 
-- (NSArray<NSLayoutConstraint *> *)constraintsForPresentationStyle:(InAppPresentationStyle)style withContainerView:(UIView *)containerView {
-    switch (style) {
+- (NSArray<NSLayoutConstraint *> *)constraintsForPresentationStyle:(InAppViewDisplayType)displayType withContainerView:(UIView *)containerView {
+    switch (displayType) {
         case FullScreen:
             return @[
                 // Constraints to fill the containerView

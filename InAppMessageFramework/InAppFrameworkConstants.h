@@ -8,8 +8,8 @@
 #ifndef InAppFrameworkConstants_h
 #define InAppFrameworkConstants_h
 
-//Supported presntation Style used by custom message to setup view container
-typedef NS_ENUM(NSUInteger, InAppPresentationStyle) {
+//Supported view types used with InApp.
+typedef NS_ENUM(NSUInteger, InAppViewDisplayType) {
     FullScreen,
     Modal,
     Banner

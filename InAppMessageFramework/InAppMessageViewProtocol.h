@@ -17,7 +17,7 @@
 - (void)configureView;
 
 @optional
-- (InAppPresentationStyle)presentationStyle;
+- (InAppViewDisplayType)displayType;
 
 @end
 

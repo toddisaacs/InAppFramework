@@ -35,7 +35,7 @@
     [self prepareConstraints];
 }
 
-- (InAppPresentationStyle)presentationStyle {
+- (InAppViewDisplayType)displayType {
     return FullScreen;
 }
 
