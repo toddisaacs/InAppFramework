@@ -15,11 +15,10 @@
 
 @implementation FullScreenView
 
+// View configuration will be called after the view controller sizes the container this view will be
+// presented in.
 - (instancetype)initWithMessage:(InAppMessage *)message {
     self = [super initWithMessage:message];
-    if (self) {
-        // Initialization moved to configureView in the base class
-    }
     return self;
 }
 

@@ -8,12 +8,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "InAppMessage.h"
-#import "InAppMessageViewProtocol.h"
+#import "InAppMessageView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InAppMessageViewFactory : NSObject
- + (UIView<InAppMessageViewProtocol> *)viewForMessage:(InAppMessage *)message;
+ + (InAppMessageView *)viewForMessage:(InAppMessage *)message;
 @end
 
 NS_ASSUME_NONNULL_END

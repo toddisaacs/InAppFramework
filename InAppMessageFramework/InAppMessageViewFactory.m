@@ -13,7 +13,7 @@
 
 @implementation InAppMessageViewFactory
 
-+ (UIView<InAppMessageViewProtocol> *)viewForMessage:(InAppMessage *)message {
++ (InAppMessageView *)viewForMessage:(InAppMessage *)message {
     switch (message.messageType) {
         case FullscreenTemplate:
             return [[FullScreenView alloc] initWithMessage:message];
