@@ -5,7 +5,6 @@
 //  Created by Todd Isaacs on 2/24/24.
 //
 
-// MainViewController.m
 #import "MainViewController.h"
 #import "InAppMessageManager.h"
 @implementation MainViewController

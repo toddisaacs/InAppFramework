@@ -9,8 +9,10 @@
 #import "InAppMessage.h"
 
 @interface FullScreenView ()
+
 @property (nonatomic, strong) NSArray *portraitConstraints;
 @property (nonatomic, strong) NSArray *landscapeConstraints;
+
 @end
 
 @implementation FullScreenView
@@ -23,6 +25,7 @@
 }
 
 - (void)configureView {
+  [super configureView];
     // Ensure to call super to inherit any base class setup
     [super configureView];
     
@@ -33,6 +36,8 @@
   
     // Prepare constraints for both orientations
     [self prepareConstraints];
+  
+    [self addCloseButton];
 }
 
 - (InAppViewDisplayType)displayType {

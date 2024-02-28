@@ -9,11 +9,19 @@
 #import "InAppMessage.h"
 #import "InAppMessageViewProtocol.h"
 
+
+@protocol InAppMessageViewDelegate <NSObject>
+- (void)shouldDismissInAppMessageView;
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InAppMessageView : UIView <InAppMessageViewProtocol>
 
 @property (nonatomic, strong, nullable) InAppMessage *message;
+@property (weak, nonatomic) id<InAppMessageViewDelegate> delegate;
+
+- (void)addCloseButton;
 
 - (instancetype)initWithMessage:(InAppMessage *)message NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithFrame:(CGRect)frame NS_DESIGNATED_INITIALIZER;

@@ -18,7 +18,7 @@
 #import "InAppMessageViewFactory.h"
 #import "InAppFrameworkConstants.h"
 
-@interface InAppViewController ()
+@interface InAppViewController () <InAppMessageViewDelegate>
 
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) InAppMessageView *messageView;
@@ -32,6 +32,7 @@
     if (self) {
         _message = message;
         _messageView = [InAppMessageViewFactory viewForMessage:self.message];
+        _messageView.delegate = self;
     }
     return self;
 }
@@ -139,6 +140,10 @@
                 [self.containerView.heightAnchor constraintEqualToConstant:100] // Fixed height for banner
             ];
     }
+}
+
+- (void)shouldDismissInAppMessageView {
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
