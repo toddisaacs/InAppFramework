@@ -58,7 +58,7 @@
                   inAppVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
                   break;
               case ModalTemplate:
-                  inAppVC.modalPresentationStyle = UIModalPresentationCustom; // Adjust as necessary for your modal style
+                  inAppVC.modalPresentationStyle = UIModalPresentationOverCurrentContext; // Adjust as necessary for your modal style
                   break;
               case BannerTemplate:
                   inAppVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;

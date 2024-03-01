@@ -40,14 +40,6 @@
 - (void)addCloseButton {
   UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
-  UIFont *size = [UIFont systemFontOfSize: 60];
-  UIImageSymbolConfiguration *config = [UIImageSymbolConfiguration configurationWithFont:size];
-  [config traitCollection: colot]
-  
-    // Create a symbol configuration with desired point size and weight
-    UIImageSymbolConfiguration *sizeConfig = [UIImageSymbolConfiguration configurationWithPointSize:30 weight:UIImageSymbolWeightRegular];
-   
-    
     // Load the symbol image
     UIImage *buttonImage = [UIImage systemImageNamed:@"xmark.circle.fill"];
 

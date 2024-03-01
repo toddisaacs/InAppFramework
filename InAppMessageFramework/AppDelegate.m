@@ -20,7 +20,10 @@
   
   InAppMessage *appLoadMessage = [[InAppMessage alloc] initWithEventType:InAppEvent_AppLoad messageType:FullscreenTemplate imageName:@"Nova" text:@"Welcome to the app!"];
 
+  InAppMessage *modalMessage = [[InAppMessage alloc] initWithEventType:InAppEvent_Custom messageType:ModalTemplate imageName:@"Nova" text:@"Welcome to Modal!"];
+  
   [[InAppMessageManager sharedManager] registerMessage:appLoadMessage];
+  [[InAppMessageManager sharedManager] registerMessage:modalMessage];
   return YES;
 }
 

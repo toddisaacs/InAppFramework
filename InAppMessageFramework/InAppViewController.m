@@ -68,30 +68,20 @@
 // for all orientations
 - (void)setupContainerViewForMessage {
     
-  // Create the in-app message view using the factory, may need to move this earlier in life cycle
-  //UIView<InAppMessageViewProtocol> *messageView = [InAppMessageViewFactory viewForMessage:self.message];
-  
     self.containerView.translatesAutoresizingMaskIntoConstraints = NO; // Use auto layout
   
     InAppViewDisplayType displayType = [self.messageView displayType];
      NSArray<NSLayoutConstraint *> *constraints = [self constraintsForPresentationStyle:displayType withContainerView:self.containerView];
   
      [NSLayoutConstraint activateConstraints:constraints];
-  
-      // Set common constraints for all message types
-      [NSLayoutConstraint activateConstraints:@[
-          [self.containerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
-          [self.containerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor]
-      ]];
       
     // Additional containerView styling
     self.containerView.backgroundColor = [UIColor whiteColor];
     self.containerView.layer.cornerRadius = 10.0;
+    self.containerView.clipsToBounds = YES;
 }
 
 - (void)presentInAppMessage {
-    // Create the in-app message view using the factory
-  //InAppMessageView *messageView = [InAppMessageViewFactory viewForMessage:self.message];
   
     _messageView.translatesAutoresizingMaskIntoConstraints = NO; // Use auto layout
     [self.containerView addSubview:self.messageView];
@@ -110,6 +100,10 @@
 }
 
 - (NSArray<NSLayoutConstraint *> *)constraintsForPresentationStyle:(InAppViewDisplayType)displayType withContainerView:(UIView *)containerView {
+  
+    // Deactivate existing constraints if any
+    [NSLayoutConstraint deactivateConstraints:self.containerView.constraints];
+
     switch (displayType) {
         case FullScreen:
             return @[
@@ -122,14 +116,7 @@
                 [self.containerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor]
             ];
         case Modal:
-            return @[
-                // Constraints for centered modal view
-                //TODO: Determine how to size, will it be based on percentage of screen
-                [self.containerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
-                [self.containerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-                [self.containerView.widthAnchor constraintEqualToConstant:300], // Fixed width
-                [self.containerView.heightAnchor constraintEqualToConstant:400]  // Fixed height
-            ];
+          return [self configureModalConstraints];
         case Banner:
             return @[
                 // Constraints for banner view
@@ -142,6 +129,34 @@
     }
 }
 
+- (NSArray<NSLayoutConstraint *> *)configureModalConstraints {
+    CGFloat widthPercentage = 0.8;
+    CGFloat heightPercentage = 0.5;
+
+    CGFloat screenWidth = CGRectGetWidth(self.view.bounds);
+    CGFloat screenHeight = CGRectGetHeight(self.view.bounds);
+
+    NSLog(@"Screen Width: %f, Modal Height: %f", screenWidth, screenHeight);
+  
+    CGFloat modalWidth = screenWidth * widthPercentage;
+    CGFloat modalHeight = screenHeight * heightPercentage;
+  
+    // Ensure modalWidth works in landscape
+    modalHeight = MIN(modalHeight, screenWidth);
+
+    NSLog(@"Modal Width: %f, Modal Height: %f", modalWidth, modalHeight);
+  
+    // Create constraints
+    NSLayoutConstraint *centerYConstraint = [self.containerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor];
+    NSLayoutConstraint *centerXConstraint = [self.containerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor];
+    NSLayoutConstraint *widthConstraint = [self.containerView.widthAnchor constraintEqualToConstant:modalWidth];
+    NSLayoutConstraint *heightConstraint = [self.containerView.heightAnchor constraintEqualToConstant:modalHeight];
+
+    // Return the array of constraints
+    return @[centerYConstraint, centerXConstraint, widthConstraint, heightConstraint];
+}
+
+//InAppMessageDelegate
 - (void)shouldDismissInAppMessageView {
   [self dismissViewControllerAnimated:YES completion:nil];
 }

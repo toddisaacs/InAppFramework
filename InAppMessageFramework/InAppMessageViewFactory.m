@@ -16,8 +16,8 @@
     switch (message.messageType) {
         case FullscreenTemplate:
             return [[FullScreenView alloc] initWithMessage:message];
-//        case InAppMessageTypeModal:
-//            return [[ModalView alloc] initWithMessage:message];
+        case ModalTemplate:
+            return [[ModalView alloc] initWithMessage:message];
 //        case InAppMessageTypeBanner:
 //            return [[BannerInAppMessageView alloc] initWithMessage:message];
         default:

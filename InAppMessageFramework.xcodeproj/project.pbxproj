@@ -138,6 +138,8 @@
 				DAFB67FD2B8BB5A2009653F7 /* main.m */,
 				DAFB68202B8BB686009653F7 /* FullScreenView.h */,
 				DAFB68242B8BB686009653F7 /* FullScreenView.m */,
+				DAFB682C2B8BB686009653F7 /* ModalView.h */,
+				DAFB68292B8BB686009653F7 /* ModalView.m */,
 				DAFB68212B8BB686009653F7 /* InAppMessage.h */,
 				DAFB68272B8BB686009653F7 /* InAppMessage.m */,
 				DAFB68302B8BB687009653F7 /* InAppMessageManager.h */,
@@ -151,8 +153,6 @@
 				DAFB682E2B8BB686009653F7 /* InAppViewController.m */,
 				DAFB682A2B8BB686009653F7 /* MainViewController.h */,
 				DAFB682D2B8BB686009653F7 /* MainViewController.m */,
-				DAFB682C2B8BB686009653F7 /* ModalView.h */,
-				DAFB68292B8BB686009653F7 /* ModalView.m */,
 				DAFB68392B8BC816009653F7 /* InAppFrameworkConstants.h */,
 			);
 			path = InAppMessageFramework;
